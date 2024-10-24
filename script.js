@@ -46,6 +46,42 @@ const printLibrary = () => {
 }
 
 printLibrary()
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Get DOM elements
+    const sideForm = document.getElementById('sideForm');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('closeBtn');
+    const addBookForm = document.getElementById('addBookForm');
+    const btnAddBook = document.getElementById('btnAddBook')
+    
+    // Form open/close functions
+    function openForm() {
+      sideForm.classList.add('active');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeForm() {
+      sideForm.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+      // Optional: reset form when closing
+      addBookForm.reset();
+    }
+    
+    
+    
+    // Event listeners
+    closeBtn.addEventListener('click', closeForm);
+    overlay.addEventListener('click', closeForm);
+    btnAddBook.addEventListener('click', openForm);
+    
+    // You'll need to add this listener to your "Add new book" button
+    // const addNewBookBtn = document.getElementById('addNewBookBtn');
+    // addNewBookBtn.addEventListener('click', openForm);
+  });
+
     
 
 

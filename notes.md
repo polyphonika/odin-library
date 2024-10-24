@@ -8,9 +8,9 @@
 
 ### Next actions
 
-- [] Design basic HTML/CSS. Decide cards or table
-- - [] Add HTML as example for styling.
-- - [] Work on styling. Start with reset. 
+- [x] Design basic HTML/CSS. Decide cards or table
+- - [x] Add HTML as example for styling.
+- - [x] Work on styling. Start with reset. 
 - - [] Move to JS
 - [x] Decide if using modal, sideform or permanent form
 - [] Design JS functionality, DOM manipulation etc
@@ -30,12 +30,12 @@
 - https://uicolors.app/create
 
 ### Next immediate actions
-- [] Style header as top block, full width, but with flex container inside or grid so that it doesn't extend entirely across the page.
-- - [] Apply the same rules to the table width so it has a max width
-- - [] Add svg logo
-- [] Move the button into the table card, similar to Tailwind example
-- [] Ask ChatGPT _and_ Claude how to work on the sidebar without distraction and breaking the overall page. Should we just add the semantic HTML first?
-- [] Build sidebar menu
+- [x] Style header as top block, full width, but with flex container inside or grid so that it doesn't extend entirely across the page.
+- - [x] Apply the same rules to the table width so it has a max width
+- - [x] Add svg logo
+- [x] Move the button into the table card, similar to Tailwind example
+- [x] Ask ChatGPT _and_ Claude how to work on the sidebar without distraction and breaking the overall page. Should we just add the semantic HTML first?
+- [x] Build sidebar menu
 
 
 **READ FIRST: CHANGE YOUR CONTAINER TO A UTILITY CLASS
