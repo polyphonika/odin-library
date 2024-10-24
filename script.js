@@ -12,6 +12,11 @@ Book.prototype.addBookToLibrary = function(library) {
     library.push(this);
 }
 
+// Add a method to the Book prototype to toggle the read status
+Book.prototype.toggleReadStatus = function(isChecked) {
+    this.haveRead = isChecked;
+}
+
 //Option 2, more of a standard function
 // function addBookToLibrary(title, author, pages, haveRead) {
 //     const newBook = new Book(title, author, pages, haveRead)
@@ -87,6 +92,11 @@ function outputLibraryToTable() {
 function deleteBook(bookIndex) {
     myLibrary.splice(bookIndex,1);
     outputLibraryToTable();
+}
+
+function toggleReadStatus(index, isChecked) {
+    myLibrary[index].toggleReadStatus(isChecked); // Call the prototype method
+    console.log(myLibrary);
 }
 
 function pageLoad() {
