@@ -51,7 +51,11 @@
                             <td>The Great Gatsby</td>
                             <td>F. Scott Fitzgerald</td>
                             <td>180</td>
-                            <td>Unread</td>
+                            <!-- <td>Unread</td> -->
+                             <td><label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label></td>
                             <td><button class="btn-delete" id="btnDelete">Delete?</button></td>
                         </tr>
                         <tr>
@@ -96,8 +100,8 @@
             <div class="form-group">
                 <label for="status">Status</label>
                 <select id="status" name="status">
-                    <option value="unread">Unread</option>
-                    <option value="read">Read</option>
+                    <option value="false">Unread</option>
+                    <option value="true">Read</option>
                 </select>
             </div>
             <button type="submit" class="submit-btn">Add Book</button>

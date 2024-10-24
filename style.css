@@ -384,7 +384,7 @@ form {
 .submit-btn {
   margin-top: auto;
   padding: 0.75rem;
-  background-color: #2563eb;
+  background-color: var(--emerald-600);
   color: white;
   border: none;
   border-radius: 0.375rem;
@@ -394,12 +394,12 @@ form {
 }
 
 .submit-btn:hover {
-  background-color: #1d4ed8;
+  background-color: var(--emerald-700);
 }
 
 .submit-btn:focus {
   outline: none;
-  box-shadow: 0 0 0 2px white, 0 0 0 4px #2563eb;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--emerald-500);;
 }
 
 /* Active states */
@@ -417,3 +417,93 @@ form {
 .form-group select:user-invalid {
   border-color: #ef4444;
 }
+
+/* Hide the native checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Base styles for custom checkbox */
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox .checkmark {
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  background-color: #e5e7eb; /* Default unchecked color (light gray) */
+  border: 2px solid transparent;
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Checkmark appearance */
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Hide the native checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Base styles for custom checkbox */
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox .checkmark {
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 4px;
+  background-color: var(--slate-200);
+  /* border: 1px solid #ef4444; */
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Checkmark appearance */
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Change to green when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: var(--emerald-600); /* Green background when checked */
+  border-color: var(--emerald-500); /* Optional: Match border to the green background */
+}
+
+/* Show the checkmark symbol when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  display: block;
+}
+
+
+
